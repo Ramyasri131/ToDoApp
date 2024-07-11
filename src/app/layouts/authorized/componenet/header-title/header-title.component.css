@@ -1,0 +1,10 @@
+.heading{
+    font-weight:600;
+    font-size: 18px;
+}
+@media screen and (max-width:550px){
+    .heading{
+        font-size: 12px;
+    }
+}
+

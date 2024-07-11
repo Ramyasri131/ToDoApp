@@ -1,0 +1,96 @@
+.mobileview-header {
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.heding-section {
+    justify-content: space-between;
+}
+
+.heading {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.login-heading {
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    color: #BA5112;
+}
+
+.add-task-btn {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 0.25rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 15px;
+    color: #251814;
+}
+
+.add-icon {
+    background: #BA5112;
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-left: 0.25rem;
+}
+
+.buttons {
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.signout-btn {
+    padding: 0.5rem;
+    background: #BA5112;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signout-img {
+    width: 0.65rem;
+    height: 0.65rem;
+}
+
+.navigation-dropDown {
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    padding: 0.5rem;
+    width:85%;
+    background: #EDB046;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+option{
+    width:10%;
+}
+
+@media screen and (max-width:550px) {
+    .title{
+        font-size: 11px !important;
+    }
+
+    .signout-btn{
+        font-size: 11px !important;
+    }
+    
+}

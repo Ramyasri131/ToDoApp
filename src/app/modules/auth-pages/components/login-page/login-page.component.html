@@ -1,0 +1,30 @@
+<body class="login-page d-flex font">
+    <div class="login-box">
+        <div class="login-content">
+            <div class="login-heading  d-flex">
+                <div class="heading">To-Do App</div>
+                <p class="caption">Start organizing your life day by day</p>
+            </div>
+            <div [formGroup]="userCredentialsForm" class="credentials d-flex">
+                <div class="input-element-division d-flex">
+                    <input type="text" placeholder="Enter your Email" class="input-element" formControlName="Email" />
+                </div>
+                <span *ngIf="inValidEmailMessage!=null" class="validation-message float-left">
+                    {{inValidEmailMessage}}
+                </span>
+                <div class="input-element-division d-flex"><input [type]="isPasswordVisible ? 'text' : 'password'" placeholder="Enter your password" class="input-element" formControlName="Password">
+                    <div class="hidden-eye-image">
+                        <img src="assets/images/hidden-eye.png" alt="hidden-eye" *ngIf="!isPasswordVisible" (click)="tooglePassword()"/>
+                        <img src="assets/images/half-eye.png" alt="half-eye" *ngIf="isPasswordVisible" (click)="tooglePassword()"/>
+                    </div>
+                </div>
+                <span *ngIf="inValidPasswordMessage!=null" class="validation-message float-left">
+                    {{inValidPasswordMessage}}
+                </span>
+            </div>
+            <button class="login-button pointer-cursor" (click)="userDetailsSubmission()">Sign In</button>
+            <p class="validation-message">{{message}}</p>
+            <div class="signup-navigation">Don't have an account? Create <span (click)="openSignUp()" class="link-signup pointer-cursor">here</span></div>
+        </div>
+    </div>
+</body>

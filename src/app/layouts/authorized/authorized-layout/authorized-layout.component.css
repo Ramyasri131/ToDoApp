@@ -1,0 +1,37 @@
+.d-flex {
+    display: flex;
+}
+
+.side-bar {
+    width: 15%;
+}
+
+.app-blur {
+    pointer-events: none;
+    filter: blur(3px);
+}
+
+.app-body {
+    width: 85%;
+}
+
+.add-task-popup {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+}
+
+.add-task-section {
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:550px) {
+    .add-task-popup {
+        position: absolute;
+        top: 25%;
+        bottom: 25%;
+        z-index: 5;
+    }
+
+}

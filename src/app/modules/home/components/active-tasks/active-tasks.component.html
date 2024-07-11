@@ -1,0 +1,38 @@
+    <div [class.app-blur]="isEditTaskClicked==true">
+    <app-header name="Active"></app-header>
+    <div class="active-tasks font">
+        <div class="active-tasks-content">
+            <div class="task-details d-flex">
+                <div class="heading d-flex">
+                    <app-navigation-heading name="Today's Active Task"></app-navigation-heading>
+                </div>
+                <div class="day-date">{{currentDate}}</div>
+            </div>
+            <div class="todo-list d-flex">
+                <div class="tasks">
+                    <div *ngFor="let item of taskList;let i=index">
+                        <div class="task pointer-cursor" (click)="openToolTip(i,item)" [class.task-staus-change]="item.Status=='InActive'">
+                            <app-task title={{item.Title}} taskStatus={{item.Status}} (updateStatusEvent)="updateStatus($event,item)"></app-task>
+                        </div>
+                        <div class="tooltip" *ngIf="openDivIndex==i">
+                            <div class="tooltip-content d-flex">
+                                <span class="tooltip-heading">{{item.Title}}</span>
+                                <span class="latest-info">Added {{timeDifference}} ago</span>
+                            </div>
+                            <div class="tooltip-description d-flex">
+                                <span class="title">Description</span>
+                                <span class="description">{{item.Description}}</span>
+                            </div>
+                            <div class="action-container d-flex">
+                                 <img src="assets/images/unselected-checkbox.png" alt="check-box" class="pointer-cursor unselected-checkbox" (click)="updateStatus('InActive',item)" />
+                                <div class="actions-icons d-flex"><img src="assets/images/edit-icon.png" alt="edit-icon" class="selected-checkbox-icon pointer-cursor" (click)="OnClickEditIcon(item)" />
+                                <img src="assets/images/active-delete.png" alt="delete-icon" class="delete-icon pointer-cursor" (click)="deleteTaskById(item.Id)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

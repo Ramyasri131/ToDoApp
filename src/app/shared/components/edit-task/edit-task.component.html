@@ -1,0 +1,23 @@
+<div class="add-task-popup font">
+    <div class="add-task-section d-flex">
+        <div class="add-task d-flex" [formGroup]="editTaskForm">
+            <div class="add-title-textarea"><textarea placeholder="Add title" class="font"
+                    formControlName="editTitle"></textarea></div>
+            <span
+                *ngIf="(editTaskForm.controls.editTitle.touched || editTaskForm.controls.editTitle.dirty)&&(editTaskForm.controls.editTitle.invalid&&editTaskForm.controls.editTitle.errors) ">
+                <span *ngIf="editTaskForm.controls.editTitle.errors['required']" class="validation-message">
+                    Add Title
+                </span>
+            </span>
+            <span *ngIf="invalidMessage!=null" class="validation-message">
+            </span>
+            <div class="add-description-textarea"><textarea placeholder="Add Description" class="font"
+                    formControlName="editDescription"></textarea></div>
+        </div>
+        <div class="action-buttons d-flex">
+            <button class="cancel-button pointer-cursor" (click)="closeEditTaskPopup()">Cancel</button>
+            <button class="save-button pointer-cursor" (click)="saveTask()">Save</button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,9 @@
+<div class="tasks-display d-flex pointer-cursor">
+        <div class="check-box pointer-cursor" *ngIf="isActive" (click)="markAsComplete($event)">
+            <img src="assets/images/unselected-checkbox.png" alt="check-box" class="pointer-cursor" />
+        </div>
+        <div class="check-box pointer-cursor" *ngIf="!isActive" (click)="markAsComplete($event)">
+            <img src="assets/images/checkbox-checked.png" alt="check-box" class="pointer-cursor"/>
+        </div>
+    <div class="task-content pointer-cursor">{{title}}</div>
+</div>

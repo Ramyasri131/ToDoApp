@@ -1,0 +1,20 @@
+<div class="add-task-popup font d-flex">
+    <div class="add-task-section d-flex">
+        <div class="add-task d-flex" [formGroup]="taskForm">
+            <div class="add-title-textarea"><textarea placeholder="Add title" class="font" formControlName="title"></textarea></div>
+            <span *ngIf="(taskForm.controls.title.touched || taskForm.controls.title.dirty)&&(taskForm.controls.title.invalid&&taskForm.controls.title.errors) ">
+                <span *ngIf="taskForm.controls.title.errors['required']" class="validation-message">
+                    Add Title
+                </span>
+            </span>
+            <span *ngIf="invalidMessage!=null" class="validation-message">
+                {{invalidMessage}}
+            </span>
+            <div class="add-description-textarea"><textarea placeholder="Add Description" class="font" formControlName="description"></textarea></div>
+        </div>
+        <div class="action-buttons d-flex">
+            <button class="cancel-button pointer-cursor" (click)="closeAddTaskPopup()">Cancel</button>
+            <button class="save-button pointer-cursor" (click)="onClickAddTask()">Save</button>
+        </div>
+    </div>
+</div>

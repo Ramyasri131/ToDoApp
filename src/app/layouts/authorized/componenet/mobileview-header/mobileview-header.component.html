@@ -1,0 +1,29 @@
+<div class="mobileview-header d-flex">
+    <header class="d-flex heding-section">
+        <div class="login-heading  d-flex">
+            <div class="heading">To-Do App</div>
+        </div>
+        <div class="d-flex buttons">
+            <button class="add-task-btn d-flex" (click)="displayPopup()">
+                <span class="title">Add Task</span>
+                <div class="add-icon">
+                    +
+                </div>
+            </button>
+            <button class="signout-btn d-flex pointer-cursor" (click)="onClickSignOut()">
+                <span>Sign out</span>
+                <img src="assets/images/sign-out.png" alt="sign-out" class="signout-img" />
+            </button>
+        </div>
+    </header>
+    <div class="navigation-dropDown d-flex">
+        <select class="dropdown" (change)="navigateTo($event)">
+            <option value="/layout/dashboard" routerLinkActive="active"><app-navigation
+                    name="DashBoard"></app-navigation></option>
+            <option value="layout/active-tasks" routerLinkActive="active"><app-navigation
+                    name="Active"></app-navigation></option>
+            <option value="/layout/completed-tasks" routerLinkActive="active"><app-navigation
+                    name="Completed"></app-navigation></option>
+        </select>
+    </div>
+</div>

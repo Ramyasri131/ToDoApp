@@ -1,0 +1,18 @@
+<section [class.d-flex]="mediaSize=='Desktop'||mediaSize=='Tablet'" [class.d-none]="mediaSize=='Mobile'"
+    [class.app-blur]="isAddTaskClicked==true||isEditOpen==true">
+    <app-side-bar class="side-bar" (onClickAddTask)="openPopup()"></app-side-bar>
+    <div class="app-body">
+        <router-outlet (activate)="subscribeTochildEmitter($event)" />
+    </div>
+</section>
+<div class="d-flex add-task-section">
+    <div class="add-task-popup">
+        <app-add-task [class.d-none]="isAddTaskClicked==false" (closePopupEvent)="closePopup()"
+            (addTaskCompleteEvent)="onAddTaskComplete($event)"></app-add-task>
+    </div>
+</div>
+
+<section [class.app-blur]="isAddTaskClicked==true||isEditOpen==true" *ngIf="mediaSize=='Mobile'">
+    <app-mobileview-header (onClickAddTask)="openPopup()"></app-mobileview-header>
+    <router-outlet />
+</section>

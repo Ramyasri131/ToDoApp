@@ -1,0 +1,39 @@
+.task-content{
+    margin-left: 0.5rem;
+    font-weight: 400;
+    color: #251814;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tasks-display{
+    padding: 1rem;
+}
+
+.tasks-display input{
+    margin-left:1rem;
+}
+
+.check-box img{
+    padding: 0.1rem 0.1rem 0.1rem 0.3rem;
+    width:1rem;
+    height:1rem;
+}
+
+@media screen and (max-width:550px){
+    .task-content{
+        font-size: 10px;
+    }
+
+    .check-box img{
+        padding: 0.1rem 0.1rem 0.1rem 0.3rem;
+        width:0.5rem;
+        height:0.5rem;
+    }
+
+    .tasks-display{
+        padding: 1rem;
+        align-items: center;
+    }
+}

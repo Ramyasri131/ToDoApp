@@ -1,0 +1,8 @@
+@switch(pageLayoutService.layout$ | async){
+@case (pageLayout.Authorized) {
+<app-authorized-layout></app-authorized-layout>
+}
+@case (pageLayout.UnAuthorized) {
+<app-unauthorized-layout></app-unauthorized-layout>
+}
+}

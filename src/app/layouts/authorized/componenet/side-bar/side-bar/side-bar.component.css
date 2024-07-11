@@ -1,0 +1,58 @@
+.d-flex{
+  display: flex;
+}
+
+.side-bar{
+    font-family: "Lexend";
+    text-align: center;
+}
+
+.side-bar-heading{
+    color: #BA5112;
+}
+
+.add-task{
+    text-align: center;
+    margin-top: 3rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-task-btn{
+    padding:0.75rem 1.5rem 0.75rem 1.5rem;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 0.25rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title{
+    font-weight:500;
+    font-size: 15px;
+    color: #251814;
+}
+
+.add-icon{
+   background: #BA5112;
+   border-radius: 50%;
+   width:1rem;
+   height:1rem;
+   color:#FFFFFF;
+   margin-left: 1rem;   
+}
+
+.navigations{
+  flex-direction: column;
+  margin-top: 4rem;
+  gap:3rem;
+}
+
+.navigations a{
+    text-decoration: none;
+}
+
+.active{
+    background: #EDB046;
+}

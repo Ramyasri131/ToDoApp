@@ -1,0 +1,119 @@
+<div [class.d-block]="mediaSize=='Desktop'||mediaSize=='Tablet'"  [class.d-none]="mediaSize=='Mobile'">
+    <app-header name="Dashboard"></app-header>
+<div class="font dashboard d-flex">
+    <div class="dashboard-content">
+        <div class="d-flex content">
+            <div class="">
+                <h1>Hello, Beautiful Human!</h1>
+                <p>What do you want to do today?</p>
+            </div>
+            <div class="d-flex women-image"><img src="assets/images/working-women.png" alt="working-women"
+                    class="working-women" />
+            </div>
+        </div>
+        <div class="task-details d-flex">
+            <div class="heading d-flex">
+                <app-navigation-heading name="Today's Task"></app-navigation-heading>
+                <span class="delete pointer-cursor" (click)="deleteAllTasks()">Delete All</span>
+            </div>
+            <div class="day-date">{{currentDatetime}}</div>
+        </div>
+        <div class="todo-list d-flex">
+            <div class="tasks">
+                <div class="task" *ngFor="let item of taskList"
+                    [class.task-status-completed]="item.Status==='InActive'">
+                    <app-task  [title]="item.Title" [taskStatus]="item.Status" (updateStatusEvent)="updateStatus($event,item)"></app-task>
+                </div>
+            </div>  
+            <div class="status">
+                <div class="completed-tasks d-flex">
+                    <div class="completed-icon">
+                        <img src="assets/images/completed.png" alt="completed" />
+                    </div>
+                    <div class="percentage">
+                       {{completedPercentage}}%
+                    </div>
+                    <div class="label">
+                        Completed Tasks
+                    </div>
+                </div>
+                <div class="active-tasks d-flex">
+                    <div class="completed-icon">
+                        <img src="assets/images/clock-image.png" alt="clock-image" />
+                    </div>
+                    <div class="percentage">
+                        {{activePercentage}}%
+                    </div>
+                    <div class="label">
+                        Active Tasks
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<div class="font dashboard d-flex" [class.d-flex]="mediaSize=='Mobile'"
+[class.d-none]="mediaSize=='Desktop'||mediaSize=='Tablet'">
+    <div class="dashboard-content">
+        <div class="d-flex content">
+            <div>
+                <h1>Hello, Beautiful Human!</h1>
+                <p>What do you want to do today?</p>
+            </div>
+            <div class="d-flex women-image"><img src="assets/images/working-women.png" alt="working-women"
+                    class="working-women" />
+            </div>
+        </div>
+        <div class="status d-flex">
+            <div class="completed-tasks d-flex">
+                <div class="d-flex completed-tasks-content">
+                    <div class="completed-icon">
+                        <img src="assets/images/completed.png" alt="completed" />
+                    </div>
+                    <div class="status-check d-flex">
+                        <div class="percentage">
+                            40%
+                        </div>
+                        <div class="label">
+                            Completed Tasks
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="active-tasks d-flex">
+                <div class="d-flex completed-tasks-content">
+                    <div class="completed-icon">
+                        <img src="assets/images/clock-image.png" alt="clock-image" />
+                    </div>
+                    <div class="status-check d-flex">
+                        <div class="percentage">
+                            60%
+                        </div>
+                        <div class="label">
+                            Active Tasks
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task-details d-flex">
+            <div class="heading d-flex">
+                <app-navigation-heading name="Today's Task"></app-navigation-heading>
+                <span class="delete pointer-cursor" (click)="deleteAllTasks()">Delete All</span>
+            </div>
+            <div class="day-date">{{currentDatetime}}</div>
+        </div>
+        <div class="todo-list d-flex">
+            <div class="tasks">
+                <div class="task" *ngFor="let item of taskList"
+                    [class.task-status-completed]="item.Status==='InActive'">
+                    <app-task class="task-content" [title]="item.Title" [taskStatus]="item.Status"></app-task>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

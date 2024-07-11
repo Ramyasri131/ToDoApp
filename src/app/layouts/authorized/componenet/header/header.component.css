@@ -1,0 +1,38 @@
+.d-flex{
+    display: flex;
+}
+
+.header-component{
+    justify-content: space-between;
+    margin-right: 1rem;
+    margin-top: 0.85rem;
+}
+
+.header-title{
+     font-weight: 400; 
+     font-size: 19px;
+     align-items: center;
+}
+
+.signout-btn{
+    padding:1.25rem;
+    background: #BA5112;
+    width:7rem;
+    height:2rem;
+    border:none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signout-img{
+    width: 0.65rem;
+    height:0.65rem;
+}
+          
+@media screen and (max-width:550px){
+    .header-component{
+        display:none;
+    }
+}

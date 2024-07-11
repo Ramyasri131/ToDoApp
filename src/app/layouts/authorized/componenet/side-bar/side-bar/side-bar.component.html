@@ -1,0 +1,18 @@
+<section class="side-bar">
+    <div class="side-bar-heading">
+       <h1>To-Do App</h1>
+    </div>
+    <div class="add-task d-flex">
+      <button class="add-task-btn d-flex" (click)="displayPopup()">
+         <span class="title">Add Task</span>
+         <div class="add-icon">
+            +
+         </div>
+      </button>
+    </div>
+    <div class="navigations d-flex">
+      <a routerLink="/dashboard" routerLinkActive="active"><app-navigation name="DashBoard"></app-navigation></a>
+      <a routerLink="/active-tasks" routerLinkActive="active"><app-navigation name="Active"></app-navigation></a>
+      <a routerLink="/completed-tasks" routerLinkActive="active"><app-navigation name="Completed"></app-navigation></a>
+    </div>
+ </section>

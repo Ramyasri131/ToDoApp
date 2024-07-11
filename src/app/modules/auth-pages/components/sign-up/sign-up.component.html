@@ -1,0 +1,30 @@
+<body class="signup-page d-flex font">
+    <div class="signup-box">
+        <div class="signup-content">
+            <div class="signup-heading d-flex">
+                <div class="heading">To-Do App</div>
+                <p class="caption">Start organizing your life day by day</p>
+            </div>
+            <div [formGroup]="userCredentialsForm" class="credentials d-flex">
+                <div class="input-element-division d-flex"><input type="text" placeholder="Username"
+                        class="input-element" formControlName="Email"></div>
+                <span *ngIf="invalidEmailMessage!=null" class="validation-message float-left">
+                    {{invalidEmailMessage}}
+                </span>
+                <div class="input-element-division d-flex"><input type="text" placeholder="Password"
+                        class="input-element float-left" formControlName="Password">
+                    <div class="hidden-eye-image">
+                        <img src="assets/images/hidden-eye.png" alt="hidden-eye" />
+                    </div>
+                </div>
+                <span *ngIf="invalidPasswordMessage!=null" class="validation-message">
+                    {{invalidPasswordMessage}}
+                </span>
+            </div>
+            <button class="signup-button pointer-cursor" (click)="submitUserDetails()">Sign Up</button>
+            <p class="validation-message">{{message}}</p>
+            <div class="login-navigation">Already have an account? Sign in <span (click)="openLogin()"
+                    class="link-login pointer-cursor">here</span></div>
+        </div>
+    </div>
+</body>

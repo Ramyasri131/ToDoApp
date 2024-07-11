@@ -1,0 +1,107 @@
+.completed-tasks-content{
+    padding: 2rem;
+}
+
+.todo-list{
+    margin-top:1rem;
+    justify-content: space-between;
+}
+
+.tasks{
+    width:95%;
+}
+
+.task-content{
+    padding:1rem;
+    margin-left: 1rem;
+}
+
+.task{
+    margin-top: 1rem;
+    border-radius: 0.75rem;
+    background: #EDB046;
+    box-shadow: 2px 2px 6px 0px #0000001A;
+}
+
+.task-staus-change{
+   background: #FFFFFF;
+}
+
+.task-details {
+    width:95%;
+    justify-content: space-between;
+}
+
+/* tooltip styling */
+.tooltip{
+    background: #EDB046;
+    width:15rem;
+    padding:1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 1;
+    float: right;
+    top:-4em;
+}
+
+.tooltip-content{
+    flex-direction: column;
+}
+
+.tooltip-heading{
+  font-weight: 700;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.latest-info{
+    font-weight: 400;
+    font-size: 13px;
+    color: #BA5112;
+}
+
+.tooltip-description{
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.title{
+    font-weight: 500;
+}
+
+.description{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.action-icons{
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.selected-checkbox-icon{
+    width:1rem;
+    height:1rem;
+}
+
+.delete-icon{
+    width:1rem;
+    height:1rem;
+}
+
+@media screen and (max-width:550px) {
+    .day-date{
+        font-size: 5px;
+    }
+
+    .heading{
+        font-size: 10px;
+    }
+
+    .tooltip{   
+        width:10rem;
+    }
+    
+
+}

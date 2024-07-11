@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+.font{
+    font-family: "Lexend";
+}
+
+.d-flex{
+    display: flex;
+}
+
+.app-body::-webkit-scrollbar {
+    display: none;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
+.pointer-cursor{
+    cursor: pointer;
+}
+
+.validation-message{
+    color:red;
+    font-size: 10px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
